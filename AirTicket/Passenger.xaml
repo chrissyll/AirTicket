@@ -1,0 +1,28 @@
+﻿<Window x:Class="AirTicket.Passenger"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirTicket"
+        mc:Ignorable="d"
+        Title="Passenger" Height="550" Width="850">
+    <Grid Cursor="">
+        <Grid.Background >
+            <ImageBrush Opacity="0.5" ImageSource="images/London-1.jpg"/>
+        </Grid.Background>
+        <Border HorizontalAlignment="Center" Height="260" VerticalAlignment="Center" Width="500" Margin="164.6,195.9,178.6,64.9" BorderThickness="6" CornerRadius="10" BorderBrush="#FFEBE5E5" Background="#FFEBE5E5" Opacity="0.9"/>
+        <TextBox HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="名" VerticalAlignment="Center" Width="107" Margin="347,238,389.2,258.8"/>
+        <TextBox HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Text="出生日期" VerticalAlignment="Center" Width="107" Margin="214,283,522.2,212.8"/>
+        <Button Content="下一步" HorizontalAlignment="Center" VerticalAlignment="Center" Width="66" Margin="574.6,408.9,202.6,88.9" Height="23"/>
+        <Image HorizontalAlignment="Center" Height="50" VerticalAlignment="Center" Width="50" Margin="510,104,283.2,366.8" Source="images/icons8-cad-480.png" />
+        <TextBox HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Text="user" VerticalAlignment="Center" Width="107" Margin="213.6,236.9,522.6,258.9"/>
+        <TextBox HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="手機" VerticalAlignment="Center" Width="107" Margin="214,327,522.2,169.8"/>
+        <TextBox HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Text="姓" VerticalAlignment="Center" Width="107" Margin="213.6,236.9,522.6,258.9"/>
+        <TextBox HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="電子郵件" VerticalAlignment="Center" Width="251" Margin="214,372,378.2,124.8"/>
+        <Image HorizontalAlignment="Center" Height="50" VerticalAlignment="Center" Width="50" Margin="394,104,399.2,366.8" Source="images/icons8-group-480.png" OpacityMask="#FF421F1F" />
+        <Image HorizontalAlignment="Center" Height="50" VerticalAlignment="Center" Width="50" Margin="280,104,513.2,366.8" Source="images/icons8-air-480.png" />
+        <RadioButton Content="先生" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="347,294,0,0"/>
+        <RadioButton Content="女士" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="422,294,0,0"/>
+
+    </Grid>
+</Window>

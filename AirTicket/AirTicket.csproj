@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF20070A-BE56-401D-AF53-445AB9F638CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AirTicket</RootNamespace>
+    <AssemblyName>AirTicket</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Airline.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AirModel1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirModel1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AirModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AirModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirModel1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Airplain.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AirplainCabinDetail.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Airport.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Area.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Booking.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cabin.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarCity.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarCompany.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarCountry.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarDetail.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Commerical.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryCityAirport.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CreditCard.xaml.cs">
+      <DependentUpon>CreditCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Flight.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FlightSeat.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPhoto.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MemberViewDetail.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Passenger.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Passenger.xaml.cs">
+      <DependentUpon>Passenger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchAirTicket.xaml.cs">
+      <DependentUpon>SearchAirTicket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.xaml.cs">
+      <DependentUpon>SignIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transport.xaml.cs">
+      <DependentUpon>Transport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPhoto.cs">
+      <DependentUpon>AirModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="信用卡結帳.xaml.cs">
+      <DependentUpon>信用卡結帳.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="報表分析.xaml.cs">
+      <DependentUpon>報表分析.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="搜尋機票.xaml.cs">
+      <DependentUpon>搜尋機票.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="旅遊票卷訂單.xaml.cs">
+      <DependentUpon>旅遊票卷訂單.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="會員新增.xaml.cs">
+      <DependentUpon>會員新增.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="會員管理.xaml.cs">
+      <DependentUpon>會員管理.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="機票訂單.xaml.cs">
+      <DependentUpon>機票訂單.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="租車訂單.xaml.cs">
+      <DependentUpon>租車訂單.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="飯店訂單.xaml.cs">
+      <DependentUpon>飯店訂單.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CreditCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Passenger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchAirTicket.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="信用卡結帳.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="報表分析.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="搜尋機票.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="旅遊票卷訂單.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="會員新增.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="會員管理.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="機票訂單.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="租車訂單.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="飯店訂單.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="AirModel1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AirModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AirModel1.edmx.diagram">
+      <DependentUpon>AirModel1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\sky.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\google-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Paris-cover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Pariscover2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\howcast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\airplane %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\travel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\London-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\mastercard %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\mastercard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\visa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\amex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons8-add-480.png" />
+    <Resource Include="images\icons8-air-480.png" />
+    <Resource Include="images\icons8-cad-480.png" />
+    <Resource Include="images\icons8-group-480.png" />
+    <Resource Include="images\icons8-user-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\useradd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\15462.jpg" />
+    <Resource Include="images\3132.jpg" />
+    <Resource Include="images\602.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AirModel1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AirModel1.Context.cs</LastGenOutput>
+      <DependentUpon>AirModel1.edmx</DependentUpon>
+    </Content>
+    <Content Include="AirModel1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AirModel1.edmx</DependentUpon>
+      <LastGenOutput>AirModel1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
