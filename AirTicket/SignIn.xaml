@@ -17,12 +17,16 @@
                 </Border>
                 <TextBox x:Name="email_txt" HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" VerticalAlignment="Center" Width="125" Margin="164,42,29,208"/>
                 <Button x:Name="login_btn" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="66" Margin="110,157,142,95" Height="23" Background="#FFB8B8B8" Click="login_Click"/>
-                <Image HorizontalAlignment="Center" Height="36" VerticalAlignment="Center" Width="35" Margin="0,31,283,208" Source="images/useradd.png" RenderTransformOrigin="0.158,0.715"/>
                 <Label Content="E-mail" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="91,42,0,0"/>
                 <Label Content="Password" HorizontalAlignment="Left" Margin="91,84,0,0" VerticalAlignment="Top"/>
                 <Button x:Name="cancel_btn" Content="Cancel" HorizontalAlignment="Center" VerticalAlignment="Center" Width="66" Margin="202,157,50,95" Height="23" Background="#FFB8B8B8" Click="cancel_btn_Click"/>
                 <Button x:Name="adduser_btn" Content="建立帳戶" HorizontalAlignment="Center" VerticalAlignment="Center" Width="66" Margin="215,224,37,28" Height="23" Background="#FFB8B8B8" Click="adduser_btn_Click"/>
                 <Label x:Name="label" Content="忘記密碼?" HorizontalAlignment="Left" Margin="164,111,0,0" VerticalAlignment="Top"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="images/user.png"/>
+                    </Button.Background>
+                </Button>
 
             </Grid>
         </Viewbox>

@@ -26,12 +26,23 @@ namespace AirTicket
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // when next step button clicked
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
+            if (visa_rdbtn.IsChecked == true)
+            {
+                //newMember.Member_Gender = "男";
+            }
+            else if (master_rdbtn.IsChecked == true)
+            {
+                //newMember.Member_Gender = "女";
+            }
+            else if (ae_rdbtn.IsChecked == true)
+            {
+                //newMember.Member_Gender = "女";
+            }
+            else
+            {
+                MessageBox.Show("請點選信用卡別");
+                return;     //就不會往下走
+            }
         }
     }
 }

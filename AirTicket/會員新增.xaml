@@ -13,21 +13,27 @@
         <Viewbox Margin="225,92,93.6,53" Stretch="Fill">
             <Grid Height="275" Width="475">
                 <Border HorizontalAlignment="Center" Height="275" VerticalAlignment="Center" Width="475" BorderThickness="6" CornerRadius="10" BorderBrush="#FFDEDEDE" Background="#FFDEDEDE"/>
-                <Image HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40" Margin="404,24,31,211" Source="images/useradd.png" RenderTransformOrigin="0.158,0.715"/>
-                <TextBox x:Name="lastname_txt" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="名" VerticalAlignment="Center" Width="107" Margin="233,49,135,202"/>
-                <PasswordBox x:Name="password_txt" Margin="71,102,297,148" Width="107" Height="25" Password="1234"/>
+                <TextBox x:Name="lastname_txt" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" VerticalAlignment="Center" Width="107" Margin="233,49,135,202"/>
+                <PasswordBox x:Name="password_txt" Margin="71,96,297,154" Width="107" Height="25"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="414,23,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="Button_Click_2">
+                    <Button.Background>
+                        <ImageBrush ImageSource="images/useradd.png"/>
+                    </Button.Background>
+                </Button>
                 <Button Content="下一步" HorizontalAlignment="Center" VerticalAlignment="Center" Width="66" Margin="362,228,47,24" Height="23" BorderBrush="#FF707070" Background="#FFB8B8B8" Click="Button_Click"/>
-                <TextBox x:Name="phone_txt" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="手機" VerticalAlignment="Center" Width="107" Margin="71,154,297,97"/>
-                <TextBox x:Name="email_txt" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="電子郵件" VerticalAlignment="Center" Width="251" Margin="70,205,154,46"/>
+                <TextBox x:Name="phone_txt" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" VerticalAlignment="Center" Width="107" Margin="71,145,297,106" TextChanged="phone_txt_TextChanged" PreviewTextInput="phone_txt_PreviewTextInput"/>
+                <TextBox x:Name="email_txt" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" VerticalAlignment="Center" Width="251" Margin="71,191,153,60"/>
                 <RadioButton x:Name="mr_rdbtn" Content="先生" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="212,109,0,0"/>
                 <RadioButton x:Name="ms_rdbtn" Content="女士" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="277,109,0,0"/>
-                <Label Content="姓氏" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,47,0,0"/>
-                <Label Content="密碼" HorizontalAlignment="Left" Margin="33,103,0,0" VerticalAlignment="Top"/>
-                <Label Content="名字" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="194,50,0,0"/>
-                <Label Content="手機" HorizontalAlignment="Left" Margin="33,153,0,0" VerticalAlignment="Top"/>
-                <Label Content="E-mail" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,203,0,0"/>
-                <TextBox x:Name="firstname_txt" HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Text="姓" VerticalAlignment="Center" Width="107" Margin="71,48,297,202"/>
+                <Label Content="英文姓" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,49,0,0"/>
+                <Label Content="密碼" HorizontalAlignment="Left" Margin="23,97,0,0" VerticalAlignment="Top"/>
+                <Label Content="英文名" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,49,0,0"/>
+                <Label Content="手機" HorizontalAlignment="Left" Margin="23,144,0,0" VerticalAlignment="Top"/>
+                <Label Content="E-mail" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,189,0,0"/>
+                <TextBox x:Name="firstname_txt" HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" VerticalAlignment="Center" Width="107" Margin="71,48,297,202"/>
+                <Button Content="上一步" HorizontalAlignment="Center" VerticalAlignment="Center" Width="66" Margin="274,228,135,24" Height="23" BorderBrush="#FF707070" Background="#FFB8B8B8" Click="Button_Click_1"/>
             </Grid>
         </Viewbox>
+
     </Grid>
 </Window>

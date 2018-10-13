@@ -43,7 +43,8 @@ namespace AirTicket
                 password_txt.BorderBrush = Brushes.LightGray;
             }
             
-            var result = dbContext.Members.AsEnumerable().FirstOrDefault(x => x.Member_Account == email_txt.Text && x.Member_Password == password_txt.Password);
+            var result = dbContext.Members.AsEnumerable().FirstOrDefault(x => 
+            x.Member_Account == email_txt.Text && x.Member_Password == password_txt.Password);
 
             if (result != null)
             {
@@ -71,6 +72,12 @@ namespace AirTicket
             會員新增 main = new 會員新增();
             main.Show();
             this.Hide();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            email_txt.Text = "jackywu547@gmail.com";
+            password_txt.Password = "547";
         }
     }
 }

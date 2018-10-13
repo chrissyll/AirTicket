@@ -18,7 +18,7 @@
         <EntityTypeShape EntityType="AirModel.Commerical" Width="1.5" PointX="7.5" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AirModel.Country" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AirModel.Flight" Width="1.5" PointX="7.5" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="AirModel.Member" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirModel.Member" Width="1.625" PointX="3" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AirModel.MemberPhoto" Width="1.5" PointX="7.5" PointY="16.625" IsExpanded="true" />
         <EntityTypeShape EntityType="AirModel.MemberViewDetail" Width="1.5" PointX="5.25" PointY="12.25" IsExpanded="true" />
         <EntityTypeShape EntityType="AirModel.Order" Width="1.5" PointX="12.75" PointY="11.625" IsExpanded="true" />
